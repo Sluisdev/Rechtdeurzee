@@ -11,7 +11,8 @@ html, body {
     min-height: 100vh;
     width: 100%;
     background-color: #f1eee6;
-    overflow-x: hidden;
+    /* overflow: hidden;
+    overflow-x: hidden; */
 
 }
 
@@ -290,7 +291,7 @@ html, body {
 }
 
 .arrows {
-    grid-row-start: 4;
+    grid-row-start: 3;
     grid-column-start: 1;
     grid-column-end: 8;    
     z-index: 1;
@@ -393,7 +394,6 @@ html, body {
     flex-direction: column;
     gap: 10px;
     flex: 0 0 50%;
-
 }
 
 /* #agenda-sponsors {
@@ -599,7 +599,7 @@ html, body {
 
     #about-titel > h1 {
         margin-top: 0%;
-        font-size: 1.5em;
+        font-size: 1.8em;
         border-bottom: none;
         /* border-left: 2px solid rgba(0, 0, 0, 0.765);
         border-right: 2px solid rgba(0, 0, 0, 0.765); */
@@ -618,7 +618,7 @@ html, body {
         /* margin-top: 5vh; */
         grid-column-start: 1;
         grid-column-end: 6;
-        grid-row-start: 2;
+        grid-row-start: 1;
         gap: 20px;
 
         flex-direction: column;
@@ -647,6 +647,7 @@ html, body {
     }
 
     #practice {
+        grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 6;
         flex-direction: column;
@@ -665,7 +666,7 @@ html, body {
     }
 
     .hero-titel {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .agenda {
@@ -674,6 +675,7 @@ html, body {
 
    #musicians {
     grid-column-end: 6;
+    grid-row-start:3 ;
     justify-content: center;
     height: 475px;
     /* max-height: 100vh; */
@@ -727,15 +729,22 @@ html, body {
 
    #dirigent {
     grid-column-start: 1;
-    /* grid-row-start: 5; */
+    grid-row-start: 5;
     grid-column-end: 6;
     flex-direction: column;
-    width: 100%;
+    /* width: 90%; */
     gap: 20px;
    }
 
    #dirigent-text-item {
     width: 90%;
+    display: flex;
+    justify-content: center;
+   }
+
+   #dirigent-img-item {
+        width: 80%;
+        flex: 0 0 50%;
    }
 
    .footer {
@@ -804,6 +813,12 @@ html, body {
     .footer-copy {
         font-size: 10px;
     }
+
+    #dirigent-img-item > img {
+        border-radius: 10%;
+        height: 100%;
+    }
+
    
   
 
@@ -1076,6 +1091,5 @@ html, body {
     }
 
 } 
-
 
 
