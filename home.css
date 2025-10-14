@@ -678,7 +678,7 @@ html, body {
     }
 
     #choir-name {
-        font-style: italic;
+        /* font-style: italic; */
     }
 
     .agenda {
@@ -1088,5 +1088,6 @@ html, body {
     }
 
 } 
+
 
 
