@@ -743,8 +743,8 @@ html, body {
    }
 
    #dirigent-img-item {
-        width: 80%;
-        flex: 0 0 50%;
+        width: 321px;
+        height: 423px;
    }
 
    .footer {
@@ -1091,5 +1091,6 @@ html, body {
     }
 
 } 
+
 
 
