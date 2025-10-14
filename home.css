@@ -11,7 +11,7 @@ html, body {
     min-height: 100vh;
     width: 100%;
     background-color: #f1eee6;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 
 }
 
@@ -1076,5 +1076,6 @@ html, body {
     }
 
 } 
+
 
 
