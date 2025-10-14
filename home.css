@@ -729,7 +729,7 @@ html, body {
 
    #dirigent {
     grid-column-start: 1;
-    grid-row-start: 5;
+    grid-row-start: 4;
     grid-column-end: 6;
     flex-direction: column;
     /* width: 90%; */
@@ -1091,6 +1091,7 @@ html, body {
     }
 
 } 
+
 
 
 
