@@ -302,6 +302,8 @@ html, body {
     padding: 0px 5px 0px 5px;
 }
 
+
+
 .arrow {
     background-color: rgba(255, 255, 255, 0.447);
     /* background-color: rgba(128, 128, 128, 0.434); */
@@ -585,12 +587,28 @@ html, body {
         grid-template-columns: auto auto auto auto auto;
     }
 
+    .styling-intro-title {
+        background-color: #A38436;
+        height: 18px;
+        width: 8px;
+        border-radius: 1px;
+    }
+
+    .title-item > h2 {
+        font-size: 20px;
+        margin-left: 4px;
+    }
+
     #about-titel {
         grid-column-start: 1;
         grid-column-end: 6;
         order: 0;
         margin-bottom: 5%;
         margin-top: 5vh;
+        width: 90%;
+        height: 50px;
+        display: flex;
+        align-items: center;
     }
 
     #introTitle {
@@ -599,7 +617,7 @@ html, body {
 
     #about-titel > h1 {
         margin-top: 0%;
-        font-size: 1.8em;
+        font-size: 1.65em;
         border-bottom: none;
         /* border-left: 2px solid rgba(0, 0, 0, 0.765);
         border-right: 2px solid rgba(0, 0, 0, 0.765); */
@@ -635,10 +653,12 @@ html, body {
     }
 
     .title-item {
-        text-align: center;
-        font-size: 1.2em;
+        /* text-align: center; */
+        font-size: 1.15em;
         width: 100%;
         font-weight: bold;
+        display: flex;
+        align-items: center;
     }
 
     .paragraph-item {
@@ -690,7 +710,7 @@ html, body {
     /* position: relative; */
     margin-left: 20%;
     /* bottom: 10%; */
-    height: 48%;
+    height: 53%;
     /* max-width: 120%; */
     justify-content: flex-start;
     transition: transform 1s ease;
@@ -727,6 +747,11 @@ html, body {
         height: 100%;
     }
 
+    .arrow:active {
+        background-color: rgba(255, 255, 255, 0.639);
+        transform: translateY(4px);
+    }
+
    #dirigent {
     grid-column-start: 1;
     grid-row-start: 4;
@@ -745,6 +770,7 @@ html, body {
    #dirigent-img-item {
         width: 321px;
         height: 423px;
+        /* flex: 0 0 50%; */
    }
 
    .footer {
@@ -884,6 +910,7 @@ html, body {
 
     .title-item {
         font-size: 1.2em;
+        
     }
 
     #practice {
@@ -1091,7 +1118,5 @@ html, body {
     }
 
 } 
-
-
 
 
