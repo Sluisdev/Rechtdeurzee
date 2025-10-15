@@ -44,6 +44,7 @@ ob.observe(mobileMenu)
 const currentLocation = window.location.pathname
 const contact = currentLocation.includes("contact.html")
 const agenda = currentLocation.includes("agenda.html")
+const home = currentLocation.includes("index.html")
 
 const navContact = document.querySelector(".contact")
 const navHome = document.querySelector(".home")
@@ -57,6 +58,10 @@ else if (agenda === true ) {
     navAgenda.classList.add("agendaColor")
 }
 
+else if (home === true) {
+    navHome.classList.add("NavColor")
+}
+
 // Musicians image slider
 
 const arrowLeft = document.querySelector('.left')
@@ -67,14 +72,27 @@ const sliderContainer = document.querySelector('#musician-images')
 const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
 const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
 let indexDiv = 0;
+let marginLeft = 20
 console.log(indexDiv, '*', musicianDivWidth,'MINUS', musiciansContainerWidth, musicianDivWidth)
 
+console.dir(arrowLeft)
+
 window.addEventListener('resize', (e) => {
-    if ( e.target.innerWidth > 475) {
+    if (e.target.innerWidth > 499) {
+        marginLeft = 10
+        console.log('CHANGED MARGIN', marginLeft)
+    }
+
+    else if (e.target.innerWidth < 500) {
+        marginLeft = 20
+        console.log('CHANGED MARGIN', marginLeft)
+    }
+
+    else if ( e.target.innerWidth >= 768) {
         sliderContainer.style.transform = ''
     }
 })
-
+console.log(marginLeft)
 arrowRight.addEventListener('click', () => {
     if ( indexDiv >= 5) {
         console.log('CANCELLED FUNCTION')
@@ -86,7 +104,7 @@ arrowRight.addEventListener('click', () => {
         indexDiv * musicianDivWidth -
         /* second part calculates the space that goes on both sides for the div to be centered*/
         (musiciansContainerWidth - musicianDivWidth) /2
-    let translateValue = -(elementDistance / musiciansContainerWidth) * 100 - 20
+    let translateValue = -(elementDistance / musiciansContainerWidth) * 100 - marginLeft
     sliderContainer.style.transform = `translateX(${translateValue}%)`
     
     console.log('ARROW RIGHT:',translateValue, indexDiv)
@@ -103,7 +121,7 @@ arrowLeft.addEventListener('click', () => {
         indexDiv * musicianDivWidth -
         /* second part calculates the space that goes on both sides for the div to be centered*/
         (musiciansContainerWidth - musicianDivWidth) /2
-    let translateValue = -(elementDistance / musiciansContainerWidth) * 100 - 20
+    let translateValue = -(elementDistance / musiciansContainerWidth) * 100 - marginLeft
     sliderContainer.style.transform = `translateX(${translateValue}%)`
     console.log('ARROW LEFT:',translateValue, indexDiv)
 })
