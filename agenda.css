@@ -345,6 +345,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    /* position: relative; */
     /* top: 10%; */
     gap: 40px;
   }
@@ -528,7 +529,7 @@
     }
 
     .month-buttons {
-    height: 70%;
+    height: 65%;
     gap: 13px;
   }
 
@@ -655,4 +656,3 @@
   }
 
   }
-
