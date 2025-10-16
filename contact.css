@@ -237,7 +237,7 @@ min-width: 100%;
         }
 
         .contact-title > h1 {
-            font-size: 1.4em;
+            font-size: 1.8em;
         }
 
         .contact-info-container {
@@ -246,7 +246,7 @@ min-width: 100%;
         }
 
         .contact-title > p {
-            font-size: 0.9em;
+            font-size: 0.75em;
             padding: 5px
 
         }
@@ -295,5 +295,6 @@ min-width: 100%;
 
     
   }
+
 
 
