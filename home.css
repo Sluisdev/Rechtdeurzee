@@ -125,7 +125,7 @@ html, body {
 }
 
 .hero-title-container {
-    margin-top: 15px;
+    margin-top: 20px;
     height: 50%;
 }
 
@@ -597,6 +597,10 @@ html, body {
         background-size: cover;
         background-position: center bottom;
         justify-content: flex-start;
+    }
+
+    .hero-title-container {
+        margin-top: 30px;
     }
 
     
