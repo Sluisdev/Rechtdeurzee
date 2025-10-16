@@ -62,20 +62,43 @@ else if (home === true) {
     navHome.classList.add("NavColor")
 }
 
-// Musicians image slider
 
+// Navigation buttons for agenda
+
+const febButton = document.querySelector('.february-b')
+const novButton = document.querySelector('.november-b')
+const oktButton = document.querySelector('.oktober-b')
+const oktoberSec = document.querySelector('.oktober')
+const novemberSec = document.querySelector('.november')
+const februarySec = document.querySelector('.february-26')
+
+
+
+
+if ( window.location.pathname.includes('agenda.html')) {
+
+    febButton.addEventListener('click', () => {
+        februarySec.scrollIntoView({ behavior: "smooth"})
+    })
+
+    novButton.addEventListener('click', () => {
+        novemberSec.scrollIntoView({ behavior: "smooth"})
+    })
+
+    oktButton.addEventListener('click', () => {
+        oktoberSec.scrollIntoView({ behavior: "smooth"})
+    })
+}
+
+// Musicians image slider
 const arrowLeft = document.querySelector('.left')
 const arrowRight = document.querySelector('.right')
 const musicianDivs = document.querySelector('.img-box');
 const musiciansContainer = document.querySelector('#musicians')
 const sliderContainer = document.querySelector('#musician-images')
-const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
-const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
-let indexDiv = 0;
-let marginLeft = 20
-console.log(indexDiv, '*', musicianDivWidth,'MINUS', musiciansContainerWidth, musicianDivWidth)
 
-console.dir(arrowLeft)
+
+if (window.location.pathname.includes('index.html')) { /* code is only run on specific html page*/
 
 window.addEventListener('resize', (e) => {
     if (e.target.innerWidth > 499) {
@@ -92,12 +115,17 @@ window.addEventListener('resize', (e) => {
         sliderContainer.style.transform = ''
     }
 })
-console.log(marginLeft)
+
+let indexDiv = 0;
+let marginLeft = 20
+
 arrowRight.addEventListener('click', () => {
-    if ( indexDiv >= 5) {
+    if ( indexDiv > 5) {
         console.log('CANCELLED FUNCTION')
         return
     }
+    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
+    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
     indexDiv++
     let elementDistance = 
         /* first part calculates the div that needs to be moved to based on the index number*/
@@ -116,6 +144,8 @@ arrowLeft.addEventListener('click', () => {
         return
     }
     indexDiv--
+    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
+    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
    let elementDistance = 
         /* first part calculates the div that needs to be moved to based on the index number*/
         indexDiv * musicianDivWidth -
@@ -125,7 +155,7 @@ arrowLeft.addEventListener('click', () => {
     sliderContainer.style.transform = `translateX(${translateValue}%)`
     console.log('ARROW LEFT:',translateValue, indexDiv)
 })
-
+}
 
 
 

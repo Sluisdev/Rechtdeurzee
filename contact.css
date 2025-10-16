@@ -8,13 +8,13 @@ min-width: 100%;
    gap: 75px;
 }
 
-.contact-title > h1 {
+/* .contact-title > h1 {
     color: black;
     font-family: "Special Gothic Expanded One", sans-serif;
     height: fit-content;
     text-align: center;
     padding: 0px 10px 0px 10px;
-}
+} */
 
 #navigation-bar-contact {
     grid-row-start: 1;
@@ -43,14 +43,22 @@ min-width: 100%;
     align-items: center;
     padding-bottom: 50px;
     gap: 15px;
+    width: 80%;
+    
 
+}
+
+.contact-title > h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3.8em;
 }
 
 .contact-title > p {
     text-align: center;
     font-family: "Funnel Sans", sans-serif;
-    font-weight: lighter;
+    font-weight:400;
     font-size: 1.1em;
+    width: 90%;
 
 }
 
@@ -62,6 +70,7 @@ min-width: 100%;
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    align-items: center;
 }
 
 .contact-items-container {
@@ -117,6 +126,10 @@ min-width: 100%;
     transform: scale(calc(1/1.03));
 
 
+}
+
+.key-word-blue {
+    color: #486CCF;
 }
 
 .email {
@@ -177,7 +190,9 @@ min-width: 100%;
     margin-bottom: 15px;
   }
 
-  @media (min-width: 320px) and (max-width: 500px) {
+  
+
+  @media (min-width: 320px) and (max-width: 768px) {
 
         #contact-page {
             grid-template-rows: auto auto auto;
@@ -198,7 +213,7 @@ min-width: 100%;
         }
 
         .contact-items {
-            width: 90%;
+            width: 80%;
             height: 300px;
             gap: 15px;
         }
@@ -241,7 +256,6 @@ min-width: 100%;
         }
 
         .footer-contact {
-            /* margin-top: -50px; */
             min-height: fit-content;
             grid-column-start: 1;
             grid-column-end: 5;
@@ -250,6 +264,36 @@ min-width: 100%;
             gap: 20px;
             grid-row-start: 3;
    }
+  }
+
+  @media (min-width: 500px) and (max-width: 768px) {
+
+         .contact-items-container {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            gap: 40px;
+        }
+
+      .contact-items {
+            max-width: 375px;
+            height: 300px;
+            gap: 15px;
+        }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+
+    .contact-items-container {
+            width: 90%;
+            gap: 30px;
+        }
+
+        .contact-details li > a {
+            font-size: 16px;
+        }
+
+    
   }
 
 
