@@ -529,7 +529,7 @@
     }
 
     .month-buttons {
-    height: 65%;
+    height: 60%;
     gap: 13px;
   }
 
@@ -656,3 +656,4 @@
   }
 
   }
+
