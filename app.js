@@ -96,9 +96,10 @@ const arrowRight = document.querySelector('.right')
 const musicianDivs = document.querySelector('.img-box');
 const musiciansContainer = document.querySelector('#musicians')
 const sliderContainer = document.querySelector('#musician-images')
+const windowLocation = window.location.pathname
 
 
-if (window.location.pathname.includes('index.html')) { /* code is only run on specific html page*/
+if (windowLocation === '/' || windowLocation.includes('index.html')) { /* code is only run on specific html page*/
 
 window.addEventListener('resize', (e) => {
     if (e.target.innerWidth > 499) {
