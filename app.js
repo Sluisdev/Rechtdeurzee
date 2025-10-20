@@ -97,57 +97,60 @@ const musicianDivs = document.querySelector('.img-box');
 const musiciansContainer = document.querySelector('#musicians')
 const sliderContainer = document.querySelector('#musician-images')
 const windowLocation = window.location.pathname
+let indexDiv = 0;
+let marginLeft = 20;
+const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30/* plus gap in px */
+const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
 
+if (windowLocation.includes('index.html') || windowLocation === '/') { /* code is only run on specific html page*/
 
-if (windowLocation === '/' || windowLocation.includes('index.html')) { /* code is only run on specific html page*/
-
-window.addEventListener('resize', (e) => {
-    if (e.target.innerWidth > 499) {
+    if (window.innerWidth > 499) {
         marginLeft = 10
-        console.log('CHANGED MARGIN', marginLeft)
+        console.log('CHANGED MARGIN TO 10', marginLeft)
     }
 
-    else if (e.target.innerWidth < 500) {
+    else if (window.innerWidth < 500) {
         marginLeft = 20
-        console.log('CHANGED MARGIN', marginLeft)
+        console.log('CHANGED MARGIN TO 20', marginLeft)
     }
 
-    else if ( e.target.innerWidth >= 768) {
+    else if ( window.innerWidth >= 768) {
         sliderContainer.style.transform = ''
     }
-})
 
-let indexDiv = 0;
-let marginLeft = 20
+
 
 arrowRight.addEventListener('click', () => {
-    if ( indexDiv > 5) {
+    if ( indexDiv === 4) {
         console.log('CANCELLED FUNCTION')
         return
     }
-    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
-    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
+    
     indexDiv++
+    const gap = 30
+    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + gap/* plus gap in px */
+    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
     let elementDistance = 
         /* first part calculates the div that needs to be moved to based on the index number*/
-        indexDiv * musicianDivWidth -
+        indexDiv * musicianDivWidth  -
         /* second part calculates the space that goes on both sides for the div to be centered*/
         (musiciansContainerWidth - musicianDivWidth) /2
     let translateValue = -(elementDistance / musiciansContainerWidth) * 100 - marginLeft
     sliderContainer.style.transform = `translateX(${translateValue}%)`
     
-    console.log('ARROW RIGHT:',translateValue, indexDiv)
+    console.log('ARROW RIGHT:',translateValue, indexDiv, musiciansContainerWidth, marginLeft, musicianDivWidth)
 })
 
 arrowLeft.addEventListener('click', () => {
-     if ( indexDiv <= 0) {
+     if ( indexDiv === 0) {
         console.log('CANCELLED FUNCTION')
         return
     }
     indexDiv--
-    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
-    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30 /* plus gap in px */
-   let elementDistance = 
+    const gap = 30
+    const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + gap/* plus gap in px */
+    const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)   
+    let elementDistance = 
         /* first part calculates the div that needs to be moved to based on the index number*/
         indexDiv * musicianDivWidth -
         /* second part calculates the space that goes on both sides for the div to be centered*/
