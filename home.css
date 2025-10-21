@@ -359,7 +359,7 @@ html, body {
     
     display: flex; 
     justify-content:center;
-    gap: 2.5%;
+    gap: 40px;
     height: fit-content;
     flex-wrap: wrap;
     max-width: 100%;
@@ -369,7 +369,7 @@ html, body {
 }
 
 #musician-images > div { 
-    flex: 0 1 14%;
+    flex: 0 1 16%;
     max-height: 78%; 
  
 }
