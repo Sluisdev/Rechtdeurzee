@@ -103,6 +103,7 @@ html, body {
 #repertoire-nav {
     border-width: 0px 1px 0px 1px;
     border-style: solid;
+    border-color: white;
     padding: 0px 15px 0px 15px;
 }
 

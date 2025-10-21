@@ -42,24 +42,26 @@ ob.observe(mobileMenu)
 
 // To highlight which page the visitor is on\\
 const currentLocation = window.location.pathname
-const contact = currentLocation.includes("contact.html")
-const agenda = currentLocation.includes("agenda.html")
-const home = currentLocation.includes("index.html")
-
+const hrefHome = "https://rechtdeurzee.nl/"
 const navContact = document.querySelector(".contact")
 const navHome = document.querySelector(".home")
 const navAgenda = document.querySelector(".agenda")
+const repetoire = document.querySelector(".repertoire")
 
-if ( contact === true) {
+if ( currentLocation.includes("contact.html")) {
     navContact.classList.add("NavColor")
 }
 
-else if (agenda === true ) {
+else if (currentLocation.includes("agenda.html") ) {
     navAgenda.classList.add("agendaColor")
 }
 
-else if (home === true) {
+else if (currentLocation.includes("index.html") || window.location.href == hrefHome ) {
     navHome.classList.add("NavColor")
+}
+
+else if (currentLocation.includes("repertoire.html")) {
+    repetoire.classList.add("NavColor")
 }
 
 
@@ -99,8 +101,6 @@ const sliderContainer = document.querySelector('#musician-images')
 const windowLocation = window.location.pathname
 let indexDiv = 0;
 let marginLeft = 20;
-const musicianDivWidth = parseInt(musicianDivs.offsetWidth) + 30/* plus gap in px */
-const musiciansContainerWidth = parseInt(musiciansContainer.clientWidth)
 
 if (windowLocation.includes('index.html') || windowLocation === '/') { /* code is only run on specific html page*/
 
