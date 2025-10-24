@@ -121,7 +121,7 @@ if (windowLocation.includes('index.html') || windowLocation === '/') { /* code i
 
 
 arrowRight.addEventListener('click', () => {
-    if ( indexDiv === 4) {
+    if ( indexDiv == 5) {
         console.log('CANCELLED FUNCTION')
         return
     }
@@ -142,7 +142,7 @@ arrowRight.addEventListener('click', () => {
 })
 
 arrowLeft.addEventListener('click', () => {
-     if ( indexDiv === 0) {
+     if ( indexDiv == 0) {
         console.log('CANCELLED FUNCTION')
         return
     }
