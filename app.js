@@ -65,7 +65,12 @@ else if (currentLocation.includes("repertoire.html")) {
 }
 
 
-// Navigation buttons for agenda
+// AGENDA Page ----------------------------------------------------------------------- \\
+
+
+if ( window.location.pathname.includes('agenda.html')) {
+
+// -- Buttons agenda -- \\
 
 const febButton = document.querySelector('.february-b')
 const novButton = document.querySelector('.november-b')
@@ -73,11 +78,6 @@ const oktButton = document.querySelector('.oktober-b')
 const oktoberSec = document.querySelector('.oktober')
 const novemberSec = document.querySelector('.november')
 const februarySec = document.querySelector('.february-26')
-
-
-
-
-if ( window.location.pathname.includes('agenda.html')) {
 
     febButton.addEventListener('click', () => {
         februarySec.scrollIntoView({ behavior: "smooth"})
@@ -87,9 +87,24 @@ if ( window.location.pathname.includes('agenda.html')) {
         novemberSec.scrollIntoView({ behavior: "smooth"})
     })
 
-    oktButton.addEventListener('click', () => {
-        oktoberSec.scrollIntoView({ behavior: "smooth"})
-    })
+
+
+// -- Automatic Removal of Agenda items -- \\
+
+    const monthContainer = document.querySelector('.events').children[0].innerHTML
+    const dateAgendaItem = document.querySelector('.date-item').innerHTML
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const currentDate = new Date()
+    const dayNumber = currentDate.getDate()
+    const monthNumber = currentDate.getMonth()
+    const dateString = currentDate.toDateString()
+    console.log(dateString)
+
+    if (dateString.includes('Oct 26'))
+
+    console.log("DATE OF AGENDA POINT IS TODAY")    
+
 }
 
 // Musicians image slider
