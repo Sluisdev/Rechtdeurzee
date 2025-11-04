@@ -656,21 +656,31 @@
 
   @media (min-width: 1500px) {
     .event-name h2 {
-        font-size: 1.4vw;
+        font-size: 1.55em;
+    }
+
+    .img-card {
+        flex: 0 1 300px;
     }
 
     .event-name p {
-        font-size: 1.1vw;
+        font-size: 1.2em;
     }
 
     .list-item {
-        font-size: 110%;
+        font-size: 18px;
     }
 
     .info-card {
         gap: 20px;
-        justify-content: flex-start;
-        padding-top: 1.5vw;
+        justify-content: center;
+
+        
+    }
+
+    .events {
+        max-width:1100px;
+        /* width: initial; */
     }
 
     .location {
