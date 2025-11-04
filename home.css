@@ -1200,8 +1200,8 @@ html, body {
 
 
     #musicians {
-        min-height: 38vw;
-        /* max-height: 50vw; */
+        height: 38vw;
+        min-height: initial;
     }
 
     #musician-images {
@@ -1273,10 +1273,37 @@ html, body {
    }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
     .hero-titel {
-        font-size: 4em;
+        font-size: 4.5em;
     }
+
+    #musicians {
+        /* height: initial; */
+        max-height: 825px;
+        /* max-height: 50vw; */
+    }
+
+    #musician-images > div { 
+    flex: 0 0 260px;
+    aspect-ratio: 1/1.6;
+    }
+
+    .img-item-1 { 
+    border: 11px double black;
+   }
+
+   .img-item-2 {
+    border: 11px double black;
+   }
+
+     #musician-images {
+        justify-content:center;
+        gap: 3%;
+    }
+    
+    
+            
 }
 
 
