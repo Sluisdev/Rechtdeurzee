@@ -296,5 +296,26 @@ min-width: 100%;
     
   }
 
+  @media ( min-width: 1500px) {
+
+
+    .contact-items {
+        width: 600px;
+        height: 500px;
+    }
+
+    .item {
+        font-size: 1.25em;
+    }
+
+    .contact-items > h2 {
+        font-size: 2em;
+    }
+
+    .contact-info-container {
+        justify-content: center;
+        gap: 30px;
+    }
+  }
 
 

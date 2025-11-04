@@ -120,7 +120,7 @@ html, body {
     display: flex;
     flex-direction: column;
     /* flex-direction: column; */
-    justify-content: space-around;
+    justify-content: center;
 
 
 }
@@ -156,6 +156,7 @@ html, body {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto auto auto;
+    /* justify-items: center; */
     width: 100%;
     min-height: 100vh;
     gap: 80px;
@@ -300,12 +301,12 @@ html, body {
     grid-column-end: 8;
     background-color: #A38436;
     /* padding-top: 10px; */
-    height: 550px;
+    min-height: 45vw;
     max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 5%;
    --mask:
     radial-gradient(93.91px at 50% 126px,#000 99%,#0000 101%) calc(50% - 84px) 0/168px 51% repeat-x,
     radial-gradient(93.91px at 50% -84px,#0000 99%,#000 101%) 50% 42px/168px calc(51% - 42px) repeat-x,
@@ -356,10 +357,11 @@ html, body {
 }
 
 #musician-images {
+    /* flex: 0 0 0; */
     border-radius: 10%;
     display: flex; 
-    justify-content:space-evenly;
-    /* gap: 35px; */
+    justify-content:center;
+    gap: 30px;
     height: fit-content;
     flex-wrap: wrap;
     max-width: 100%;
@@ -369,7 +371,7 @@ html, body {
 }
 
 #musician-images > div { 
-    flex: 0 0 180px;
+    flex: 0 0 14%;
     aspect-ratio: 1/1.6;
     
  
@@ -1080,11 +1082,6 @@ html, body {
 
     }
 
-    .hero-titel {
-        font-size: 2.75em;
-
-    }
-
     #choir-name {
         font-size: 1.6em;
     }
@@ -1137,17 +1134,17 @@ html, body {
     }
 
     #musicians {
-        height: 125%;
+        height: 480px;
     }
 
     #musicians-item {
         font-size: 1.2em;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     #musician-images {
         /* flex-wrap: wrap; */
-        gap: 3%;
+        gap: 2%;
     }
 
     #musician-images > div {
@@ -1197,135 +1194,98 @@ html, body {
     .footer-nav a {
         font-size: 11px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-/* @media (min-width:901px ) and ( max-width: 1150px) {
-    .paragraph-item {
-        font-size: 0.95em;
-    }
+@media (min-width: 1500px )  {
 
-    .title-item {
-        font-size: 1.25em;
-    }
-
-    #start-up-img {
-        flex: 0 0 52%
-    }
-
-    #practice-img {
-        order: 1;
-        flex: 0 0 52%;
-    }
-}
- */
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 2100px) {
-
-
-     .hero-titel {
-        font-size: 5em;
-        margin-top: 5%;
-    }
-
-    #choir-name {
-        font-size: 1.7em;
-    }
-
-    #about-titel > h1 {
-        font-size: 3.5em;
-    }
-
-     #start-up-img {
-        flex: 1 1 30%;
-    }
-
-    .aboutUsText {
-        flex: 1 1 45%;
-    }
-
-    .paragraph-item {
-        font-size: 1.7em;
-    }
-
-    .title-item {
-        font-size: 1.9em;
-    }
-
-    #practice-img {
-        flex: 1 1 30%;
-
-    }
-
-    #practice-text {
-        flex: 1 1 45%;
-    }
 
     #musicians {
-        height: 675px;
-        gap: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* gap: px; */
-    }
-
-    #musician-images > img { 
-        width: 240px;
-        height: 370px;
-    }
-
-    .img-item-1 {
-        border: 10px double black;
-        border-top-left-radius: 175px 25px;
-        border-top-right-radius: 15px 125px;
-        border-bottom-right-radius: 150px 20px;
-        border-bottom-left-radius: 15px 175px;
-    }
-
-    .img-item-2 {
-        border: 10 px double black;
-        border-top-left-radius: 15px 125px;
-        border-top-right-radius: 175px 25px;
-        border-bottom-right-radius: 15px 175px;
-        border-bottom-left-radius: 150px 20px;
+        min-height: 38vw;
+        /* max-height: 50vw; */
     }
 
     #musician-images {
-        gap: 40px;
+        justify-content:center;
+        gap: 2.5%;
     }
 
-    #musicians-item {
-        align-self: center;
-        color: rgb(24, 24, 24);
-        font-family: "Lobster", sans-serif;
-        font-style: normal;
-        font-size: 1.8rem;
-
-
-
+    #musician-images > div { 
+    flex: 0 0 13%;
+    aspect-ratio: 1/1.6;
     }
 
-} 
+    .aboutUsText { 
+        flex: 1 0 50%;
+    }
+
+    #practice-text { 
+        flex: 1 0 50%;
+    }
+
+    .title-item {
+        font-size: 1.1em;
+    }
+
+    .paragraph-item {
+        font-size: 1.2em;
+    }
+
+    #start-up-img {
+        flex: 0 1 600px;
+    }
+
+    #practice-img {
+        flex: 0 1 600px;
+    }
+
+   #startOfChoir {
+    align-items: center;
+    max-width: 1350px;
+    width: initial;
+    justify-self: center;
+   }
+
+   #practice {
+    max-width: 1350px;
+    width: initial;
+    justify-self: center;
+   }
+
+   #dirigent-img-item {
+     flex: 0 1 525px;
+     /* aspect-ratio: 1/1.3; */
+   }
+
+   .img-item-1 { 
+    border: 10px double black;
+   }
+
+   .img-item-2 {
+    border: 10px double black;
+   }
+
+   #musicians-item {
+        font-size: 1.5vw;
+   }
+
+   #about-titel > h1 {
+    font-size: 4.2em;
+   }
+}
+
+@media (min-width: 1920px) {
+    .hero-titel {
+        font-size: 4em;
+    }
+}
+
+
+    
+
+
+
+
+
+
 
 

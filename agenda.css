@@ -583,8 +583,6 @@
 
       .events-container {
         width: 90%;
-        gap
-
     }
 
     #navigation-bar-agenda {
@@ -654,5 +652,30 @@
     font-size: 4em;
     padding: 10px 25px 10px 25px;
   }
+}
 
+  @media (min-width: 1500px) {
+    .event-name h2 {
+        font-size: 1.4vw;
+    }
+
+    .event-name p {
+        font-size: 1.1vw;
+    }
+
+    .list-item {
+        font-size: 110%;
+    }
+
+    .info-card {
+        gap: 20px;
+        justify-content: flex-start;
+        padding-top: 1.5vw;
+    }
+
+    .location {
+        font-size: 1.1vw;
+    }
   }
+
+  
