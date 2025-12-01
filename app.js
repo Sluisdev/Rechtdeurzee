@@ -73,18 +73,22 @@ if ( window.location.pathname.includes('agenda.html')) {
 // -- Buttons agenda -- \\
 
 const febButton = document.querySelector('.february-b')
-const novButton = document.querySelector('.november-b')
-const oktButton = document.querySelector('.oktober-b')
-const oktoberSec = document.querySelector('.oktober')
-const novemberSec = document.querySelector('.november')
-const februarySec = document.querySelector('.february-26')
+const marchButton = document.querySelector('.march-b')
+const septButton = document.querySelector('.september-b')
+const marchSec = document.querySelector('.march')
+const septemberSec = document.querySelector('.september')
+const februarySec = document.querySelector('.february')
 
     febButton.addEventListener('click', () => {
         februarySec.scrollIntoView({ behavior: "smooth"})
     })
 
-    novButton.addEventListener('click', () => {
-        novemberSec.scrollIntoView({ behavior: "smooth"})
+    marchButton.addEventListener('click', () => {
+        marchSec.scrollIntoView({ behavior: "smooth"})
+    })
+
+    septButton.addEventListener('click', () => {
+        septemberSec.scrollIntoView({ behavior: "smooth"})
     })
 
 
