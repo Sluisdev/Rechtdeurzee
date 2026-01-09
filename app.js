@@ -72,12 +72,24 @@ if ( window.location.pathname.includes('agenda.html')) {
 
 // -- Buttons agenda -- \\
 
+const janBtn = document.querySelector('.january-b')
 const febButton = document.querySelector('.february-b')
 const marchButton = document.querySelector('.march-b')
 const septButton = document.querySelector('.september-b')
-const marchSec = document.querySelector('.march')
-const septemberSec = document.querySelector('.september')
+const aprilBtn = document.querySelector('.april-b')
+const octBtn = document.querySelector('.october-b')
+
+const janSec = document.querySelector('.january')
 const februarySec = document.querySelector('.february')
+const marchSec = document.querySelector('.march')
+const aprSec = document.querySelector('.april')
+const septemberSec = document.querySelector('.september')
+const octSec = document.querySelector('.october')
+
+
+    janBtn.addEventListener('click', () => {
+        janSec.scrollIntoView({ behavior: "smooth"})
+    })
 
     febButton.addEventListener('click', () => {
         februarySec.scrollIntoView({ behavior: "smooth"})
@@ -87,8 +99,16 @@ const februarySec = document.querySelector('.february')
         marchSec.scrollIntoView({ behavior: "smooth"})
     })
 
+    aprilBtn.addEventListener('click', () => {
+        aprSec.scrollIntoView({ behavior: "smooth"})
+    })
+
     septButton.addEventListener('click', () => {
         septemberSec.scrollIntoView({ behavior: "smooth"})
+    })
+
+    octBtn.addEventListener('click', () => {
+        octSec.scrollIntoView({ behavior: "smooth"})
     })
 
 
